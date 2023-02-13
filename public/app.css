@@ -1,0 +1,26 @@
+body{
+    margin:0;
+    padding:0;
+}
+
+.main-page{
+    background-image: url('/images/todolist.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.main-card{
+    display:flex;
+    height:100vh;
+    align-items: center;
+    justify-content: center;
+    position:relative;
+   
+}
+
+.card-box{
+    position:absolute;
+    background:rgba(225,225,225,0.5);
+    box-shadow:0px 5px 15px 25px (225,225,225,0.5);
+}
