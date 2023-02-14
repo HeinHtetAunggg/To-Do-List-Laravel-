@@ -28,7 +28,7 @@
            <form action="/users/{{$user->username}}/taskinput" method="POST">
             @csrf
             <div class="d-flex justify-content-between">
-            <input type="text" name="body" class="form-control border border-primary" placeholder="Enter Your Task....">
+            <input type="text" name="body" class="form-control border border-primary" placeholder="Enter Your Task...." autofocus="on">
             <button type="submit" class="input-group-text bg-primary">Submit</button>
             </div>
         </form>

@@ -19,8 +19,14 @@ class AuthController extends Controller
             'username'=>['required',Rule::unique('users','username')],
             'email'=>['required','email',Rule::unique('users','email')],
             'password'=>['required','min:8'],
+            'avatar'=>['image'],
         ]);
+        if(request()->hasFile('thumbnail'))
+        {
         $formData['avatar']=request()->file('thumbnail')->store('thumbnails');
+        }else{
+            $formData['avatar']='thumbnails/profile.jpg';
+        }
         $user=User::create($formData);
         auth()->login($user);
         return redirect('/users/'.$user->username)->with('success','Welcome Dear '.$user->username);
